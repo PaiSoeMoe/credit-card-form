@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card information Form</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.0.2/cleave.min.js" integrity="sha512-SvgzybymTn9KvnNGu0HxXiGoNeOi0TTK7viiG0EGn2Qbeu/NFi3JdWrJs2JHiGA1Lph+dxiDv5F9gDlcgBzjfA==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+</head>
+<body  >
+    <div id="overlayLayer">
+        <div class="verification" >
+            <p class="success">
+                <span class="successImgContainer">
+            
+                <img src="assets/imgs/success.png" alt="success-icon">
+                </span>  
+                You have successfully submitted your credit card information</p>
+            
+            <p id="info"></p>
+            <button class="checkOutBtn" id="goBack">
+                go back
+            </button>
+
+
+        </div>
+        <div class="loaderContainer">
+            <div class="loading"></div>
+            <p class="loadingTxt">Processing your request</p>
+
+
+        </div>
+        
+
+    </div>
+    
+    <form  id="cardForm">
+
+        <div style="display: flex; justify-content: space-between; margin-bottom: 3em;"><img src="assets/imgs/amex.png" alt="American express card icon" > 
+            <img src="assets/imgs/discover.png" alt="Discover card icon" class="topIcons" > 
+            <img src="assets/imgs/visa.png" alt="Visa card icon" class="topIcons"> 
+            <img src="assets/imgs/master.png" alt="Master card icon" class="topIcons"> 
+        </div>
+
+
+
+        <label for="cardNumber" class="lbForm">Credit Card Number</label>
+        <div class="cardNumberContainer">
+            <input id="cardNumber" class="formInput" type="tel"  placeholder="Credit card number"  >
+            <div class="iconContainer"><img id="cardIcon" src="assets/imgs/credit-card.png" alt="credit card icon"  ></div>
+            <div> 
+            </div>
+            
+        </div>
+        <p class="errorMessage" id="cardErrorMsg">Invalid card number.</p>
+        
+        
+
+        <div class="expCvvContainer">
+            <div class="dateContainer">
+                <label class="lbForm" for="expiryDate" >Expiration date</label>
+                <input id="expiryDate" class="formInput" type="tel"  placeholder="01/2021" >
+                <p class="errorMessage"  id="dateErrorMsg">Invalid expiration date</p>
+            </div>
+
+
+            <div class="cvvContainer">
+                <label class="lbForm" for="cvv" >CVV Code</label>
+
+                    <input id="cvv" type="number" placeholder="cvv" class="formInput" > 
+                    <p class="errorMessage" id="cvvErrorMsg">Invalid CVV</p>
+
+            </div>
+        </div>
+
+        <button id="paymentBtn" class="checkOutBtn">Submit</button>
+    </form>
+
+
+</body>
+
+<script src="js/javascript.js"></script>
+
+</html>

@@ -1,0 +1,264 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+/* classes */
+.error{
+    transition: 0.3s;
+    border: 2px solid rgb(255, 0, 0);
+}
+
+.checkOutBtn{
+all: unset;
+cursor: pointer;
+transition: 0.5s ease-in-out;
+margin-top: 1em;
+padding: 1em; border-radius: 8px; background-color: #007BFF; color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-weight: 200; text-align: center;
+}
+
+
+.formInput:focus{
+transition: 0.5s ease-in-out;
+border:2px solid #007BFF;
+}
+
+
+.formInput{
+transition: 0.5s ease-in-out;
+border: 2px solid rgb(119, 119, 119);
+padding:1em; border-radius: 8px; width: 100%;
+
+}
+
+.checkOutBtn:hover{
+background-color: #03366b; 
+transition: 0.5s ease-in-out;
+}
+
+
+.cardNumberContainer{
+width: 100%; position: relative;
+}
+
+.iconContainer{
+width: 35px; height: 35px; position: absolute; top:50%; right: 0;  top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+}
+.errorMessage{
+font-family: Arial, Helvetica, sans-serif;
+color:rgb(255, 0, 0);
+opacity:0;
+font-size: 14px;
+}
+
+.expCvvContainer{
+display: flex; justify-content: space-between; margin:2em 0;
+
+}
+
+.lbForm{
+font-family: Arial, Helvetica, sans-serif;
+margin-bottom: 1em;
+color: rgb(124, 124, 124);
+display: inline-block;
+}
+
+.dateContainer{
+width: 60%; box-sizing: border-box;
+}
+
+.cvvContainer{
+width: 30%; box-sizing: border-box;
+}
+.overlay{
+position: absolute;
+top:0;
+left: 0;
+width: 100vw;
+height: 100vh;
+background-color: rgb(255, 255, 255, 0.80);
+z-index: 1000;
+
+}
+.verification{
+z-index: -1000;
+background-color: rgb(255, 255, 255);
+position: absolute;
+top: -200px ;
+opacity: 0;
+left: 50%;
+transform: translate(-50%,0);
+display:flex; 
+flex-direction: column; 
+width:500px;
+height: 650px;
+border-radius: 10px;
+padding: 3em 1em;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.35);
+}
+
+
+.success{
+    background-color: #03366b;
+    padding: 2em;
+    color: white;
+    border-radius: 8px;
+}
+
+.successImgContainer{
+    float:left;
+    margin-right: 1em;
+}
+
+
+.loaderContainer{
+display: none;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+
+}
+
+.loading{
+border: 5px solid  #03366b;
+position: relative;
+left: -50px;
+width: 30px;
+height: 30px;
+-webkit-animation: move 3s ease-in-out infinite; 
+animation: move 3s ease-in-out infinite;
+margin-bottom: 2em;
+}
+
+.loadingTxt{
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 300;
+}
+
+.showVeri{
+transition: 0.4s ease-in ;
+opacity: 100;
+top: 100px;
+
+}
+
+
+
+
+
+
+.topIcons{
+    width: 47px;
+}
+
+
+/* ids */
+
+
+
+#cardForm{
+display:flex; 
+flex-direction: column; 
+width:500px;
+height: 650px;
+border-radius: 10px;
+margin: 100px auto;
+padding: 3em 1em;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.35);
+
+}
+
+#cardNumber{
+width: 100%; box-sizing: border-box; padding:1em; border-radius: 8px;
+}
+#cardIcon{
+width:100%;
+}
+
+
+#info{
+    margin: 3em 2em;
+
+}
+
+
+
+
+
+
+@media( max-width: 500px){
+    #cardForm{
+        width: 100vw;
+        padding: 3em 3em;
+
+    }
+    .verification{
+        width: 450px;
+        padding: 3em 3em;
+    }
+}
+
+@media( min-width: 501px){
+    #cardForm{
+        
+        padding: 3em 5em;
+    }
+    .verification{
+        padding: 3em 6em;
+    }
+}
+
+@media( min-width: 800px){
+    #cardForm{
+        width: 750px;
+        padding: 3em 8em;
+        box-shadow: unset;
+    }
+    .verification{
+        width: 650px;
+
+    }
+}
+
+
+
+
+@-webkit-keyframes move {
+
+0% { left:-50px;   }
+50% { left: 50px; }
+100% {left: -50px;}
+
+}
+
+@keyframes move {
+
+0% { left:-50px;  }
+50% { left: 50px;  }
+100% {left: -50px;}
+
+
+
+}
+
